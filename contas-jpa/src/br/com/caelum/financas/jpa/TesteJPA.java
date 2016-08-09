@@ -1,5 +1,7 @@
 package br.com.caelum.financas.jpa;
 
+import java.math.BigDecimal;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -15,6 +17,7 @@ public class TesteJPA {
 		conta.setBanco("Caixa");
 		conta.setAgencia("043");
 		conta.setNumero("54321");
+		conta.setSaldo(new BigDecimal(653.00));
 
 		/**
 		 * Usando HSQLDB
