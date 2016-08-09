@@ -26,7 +26,7 @@ public class JpaConfigurator {
 
 		dataSource.setDriverClass("com.mysql.jdbc.Driver");
 		dataSource.setUser("root");
-		dataSource.setPassword("");
+		dataSource.setPassword("1234");
 		dataSource.setJdbcUrl("jdbc:mysql://localhost/projeto_jpa");
 
 		dataSource.setMinPoolSize(3);
@@ -51,7 +51,7 @@ public class JpaConfigurator {
 		props.setProperty("hibernate.dialect",
 				"org.hibernate.dialect.MySQL5InnoDBDialect");
 		props.setProperty("hibernate.show_sql", "true");
-		props.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+		props.setProperty("hibernate.hbm2ddl.auto", "update");
 
 		entityManagerFactory.setJpaProperties(props);
 		return entityManagerFactory;
